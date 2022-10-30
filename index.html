@@ -19,6 +19,12 @@
         <div class="Favourites">
             <a href = "">Favourites</a>
         </div>
+        <div class="Visited">
+            <a href = "">Visited</a>
+        </div>
+        <div class="Interested">
+            <a href = "">Interested</a>
+        </div>
         <div class="Map">
             <a href = "">Map</a>
         </div>
@@ -42,13 +48,12 @@
                 <div>Kevin</div> 
             </div>
             <div class="buttons">
-                <button class="upload">Upload</button>
-                <button class="share">Share</button>
+                <button class="upload" onclick="openForm()">+</button>
             </div>
         </div>
         <div class="main">
             <div class = "content">
-                <div class="restaurant">r1</div>
+                
                 
             </div>
             <div class="rightbar">
@@ -83,7 +88,46 @@
             </div>
         </div>
     </div>
-    
+    <div class = "modal" id = "modal">
+        <div class = "close-btn" onclick = "closeForm()">&times;</div>
+        <form action = "" class = "add-restaurant">
+            <h2>New Restaurant</h2>
+            <input
+            class = "input"
+            type = "text"
+            id = "getname"
+            placeholder = "Name"
+            required
+            maxlength = "200" />
+
+            <input
+            class = "input"
+            type = "number"
+            id = "rating"
+            placeholder = "Rating"
+            required
+            min = "0"
+            max = "10" />
+
+            <input
+            class = "input"
+            type = "number"
+            id = "timesvisited"
+            placeholder = "Times Visited"
+            required 
+            min = "0" />
+
+            <input
+            class = "input"
+            type = "text"
+            id = "comments"
+            placeholder = "Comments"
+            required 
+            maxlength = "200" />
+            <button class = "submitbtn" type = "submit">Submit</button>
+        </form>
+    </div>
+    <div id="overlay"></div> 
 </body>
 
 <script src="script.js"></script>
